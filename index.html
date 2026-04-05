@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="uz" style="scroll-behavior: smooth;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xiva IT-PARK  - Ta'lim Markazi </title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+            
+
+</head>
+<body>
+    <!-- Parallax decorative elements -->
+    <div class="parallax-element" data-speed="0.5" style="top: 10%; left: 5%; font-size: 2rem; opacity: 0.1; color: var(--primary-color);">
+        <i class="fas fa-circle"></i>
+    </div>
+    <div class="parallax-element" data-speed="0.3" style="top: 20%; right: 10%; font-size: 3rem; opacity: 0.1; color: var(--accent-color);">
+        <i class="fas fa-square"></i>
+    </div>
+    <div class="parallax-element" data-speed="0.7" style="bottom: 30%; left: 15%; font-size: 1.5rem; opacity: 0.1; color: var(--secondary-color);">
+        <i class="fas fa-triangle"></i>
+    </div>
+    <div class="parallax-element" data-speed="0.4" style="bottom: 20%; right: 20%; font-size: 2.5rem; opacity: 0.1; color: var(--success-color);">
+        <i class="fas fa-star"></i>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <div class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <nav class="navbar" role="navigation" aria-label="Asosiy navigatsiya">
+            <div class="nav-container">
+                <div class="logo">
+                    <h2> Xiva</h2>
+                </div>
+                    <!-- Dark mode toggle -->
+                    <div class="nav-controls">
+                        <button id="darkModeToggle" class="dark-toggle" aria-pressed="false" aria-label="Toggle dark mode">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </div>
+                <ul class="nav-menu" role="menubar">
+                    <li class="nav-item" role="none"><a href="#hero" class="nav-link" role="menuitem">Bosh sahifa</a></li>
+                    <li class="nav-item" role="none"><a href="#about" class="nav-link" role="menuitem">Biz haqimizda</a></li>
+                    <li class="nav-item" role="none"><a href="#courses" class="nav-link" role="menuitem">Kurslar</a></li>
+                    <li class="nav-item" role="none"><a href="#gallery" class="nav-link" role="menuitem">Galereya</a></li>
+                    <li class="nav-item" role="none"><a href="#testimonials" class="nav-link" role="menuitem">Fikrlar</a></li>
+                    <li class="nav-item" role="none"><a href="#statistics" class="nav-link" role="menuitem">Statistika</a></li>
+                    <li class="nav-item" role="none"><a href="#blog" class="nav-link" role="menuitem">Blog</a></li>
+                    <li class="nav-item" role="none"><a href="#contact" class="nav-link" role="menuitem">Aloqa</a></li>
+                    <li class="nav-item" role="none"><a href="#test" class="nav-link" role="menuitem">Test</a></li>
+                    <!-- ...existing code... -->
+<li class="nav-item" role="none">
+    <a href="location.html" class="nav-link" role="menuitem">
+        <i class="fas fa-map-marker-alt"></i>Xarita
+    </a>
+</li>
+<!-- ...existing code... -->
+                </ul>
+                <div class="hamburger" role="button" aria-label="Menyu" aria-expanded="false" tabindex="0">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero" aria-labelledby="hero-title">
+        <!-- Video as true background -->
+        <video autoplay muted loop playsinline class="hero-video-bg">
+            <source src="IIapAqqF86Q.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-container">
+            <h1 id="hero-title" class="hero-title">
+                <span id="typed-static">IT-PARK - </span>
+                <span id="typed-text"></span>
+                <span id="typed-cursor">|</span>
+            </h1>
+            <p class="hero-description">" Xiva IT-PARK Ta'lim markazi insonni eng yuqori nuqtasiga olib chiqadi. Bugun o'rganish orqali ertaga sarmoya yaratishni boshlang!"</p>
+            <div class="hero-buttons">
+                <a href="#courses" class="cta-button" role="button">Kurslarni ko'rish</a>
+                <a href="#contact" class="cta-button secondary" role="button">Biz bilan bog`laning ma'lumot</a>
+            </div>
+            <div id="hero-clock" class="hero-clock"></div>
+        </div>
+        <!-- Animated decorative elements -->
+        <div class="hero-shape shape-1"></div>
+        <div class="hero-shape shape-2"></div>
+        <div class="hero-shape shape-3"></div>
+    </section>
+    <!-- Particles background for all sections except hero/promo -->
+    <div id="particles-js"></div>
+
+    <!-- Promo Section (modern, video background, animated, responsive) -->
+    <section id="promo" class="promo" aria-labelledby="promo-title">
+        <!-- Video as true background for promo section -->
+        <video autoplay muted loop playsinline class="promo-video-bg">
+            <source src="Flying a drone over the ancient city of Khiva.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="promo-overlay"></div>
+        <div class="promo-container">
+            <h2 id="promo-title" class="promo-title">Yangi imkoniyatlar dunyosi</h2>
+            <p class="promo-description">
+                <span id="promo-typed-static"></span>
+                <span id="promo-typed-text"></span>
+                <span id="promo-typed-cursor">|</span>
+            </p>
+            <div class="promo-buttons">
+                <a href="#blog" class="cta-button" role="button">So‘nggi yangiliklar</a>
+                <a href="#testimonials" class="cta-button secondary" role="button">Talabalar fikrlari</a>
+            </div>
+            <ul class="promo-features">
+                <li><i class="fas fa-rocket"></i> Innovatsion metodika</li>
+                <li><i class="fas fa-users"></i> Jamoaviy loyihalar</li>
+                <li><i class="fas fa-certificate"></i> Sertifikat va stajirovka</li>
+                <li><i class="fas fa-laptop-code"></i> Real amaliyot</li>
+            </ul>
+        </div>
+        <!-- Animated shapes -->
+        <div class="promo-shape shape-1"></div>
+        <div class="promo-shape shape-2"></div>
+        <div class="promo-shape shape-3"></div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features site-section-bg" aria-labelledby="features-title">
+        <div class="container">
+            <h2 id="features-title" class="section-title">Nega   Xiva-shahar IT-PARK?</h2>
+            <div class="features-grid">
+                <div class="feature-card glass-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Mutaxassislarning yo'riqnomasi</h3>
+                    <p>Dunyodagi yetakchi mutaxassislarning tajribasidan foydalanib o'rganing</p>
+                </div>
+                <div class="feature-card glass-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <h3>Qiziqarli darslar</h3>
+                    <p>Qiziqarli darslar</p>
+                </div>
+                <div class="feature-card glass-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Shaxsiy sertifikatlar</h3>
+                    <p>Har bir tugatilgan kurs uchun sertifikat oling</p>
+                </div>
+                <div class="feature-card glass-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Jamoaviy loyihalar</h3>
+                    <p>Haqiqiy loyihalarda ishtirok etish orqali tajriba orttiring</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about site-section-bg" aria-labelledby="about-title">
+        <div class="container">
+            <h2 id="about-title" class="section-title">Biz haqimizda</h2>
+            <div class="about-content">
+                <div class="about-card glass-card" role="region" aria-labelledby="mission-title">
+                    <h3 id="mission-title">Bizning vazifamiz</h3>
+                    <p> Yuqori sifatli ta'lim berish, ularning shaxsiy va professional maqsadlariga erishishiga yordam berish.</p>
+                </div>
+                <div class="about-card glass-card" role="region" aria-labelledby="vision-title">
+                    <h3 id="vision-title">Bizning vizyonimiz</h3>
+                    <p>Ta'lim va haqiqiy dunyo ilovalari o'rtasidagi bo'shliqni to'ldiruvchi yetakchi onlayn o'quv platformasi bo'lish.</p>
+                </div>
+                <div class="about-card glass-card" role="region" aria-labelledby="values-title">
+                    <h3 id="values-title">Bizning qadriyatlarimiz</h3>
+                    <p>A'lo, intizom, innovatsiya va inklyuzivlik - eng yaxshi o'quv tajribasini ta'minlash uchun hamma narsamizni boshqaradi.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="courses" aria-labelledby="courses-title">
+        <div class="container">
+            <h2 id="courses-title" class="section-title">Bizning kurslarimiz</h2>
+            <div class="courses-grid">
+                <div class="course-card glass-card" role="region" aria-labelledby="web-dev-title">
+                    <div class="course-card-header">
+                        <h3 id="web-dev-title">Veb dasturlash</h3>
+                        <button class="expand-course" aria-expanded="false" aria-controls="web-dev-details" aria-label="Kurs tafsilotlarini ko'rsatish">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    <div class="course-meta">
+                        <span class="course-duration"><i class="fas fa-clock"></i> </span>
+                        <span class="course-price"><i class="fas fa-tag"></i> $</span>
+                    </div>
+                    <p class="course-instructor"><i class="fas fa-user"></i> Instruktor: </p>
+                    <div id="web-dev-details" class="course-details" hidden>
+                        <h4>Syllabus</h4>
+                        <ul>
+                            <li>HTML5 va semantik tuzilmalar</li>
+                            <li>CSS3, responsiv dizayn va flex/grid</li>
+                            <li>JavaScript asoslari va DOM</li>
+                            <li>Proyekt: Portfolio va SPA</li>
+                        </ul>
+                        <div class="course-actions">
+                            <button class="enroll-btn" aria-label="Kursga yozilish">Kursga yozilish</button>
+                            <button class="learn-more" aria-label="Biz bilan bog`laning ma'lumot">Biz bilan bog`laning</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-card glass-card" role="region" aria-labelledby="data-science-title">
+                    <div class="course-card-header">
+                        <h3 id="data-science-title">Ma'lumotlar fanlari</h3>
+                        <button class="expand-course" aria-expanded="false" aria-controls="data-science-details" aria-label="Kurs tafsilotlarini ko'rsatish">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    <div class="course-meta">
+                        <span class="course-duration"><i class="fas fa-clock"></i> </span>
+                        <span class="course-price"><i class="fas fa-tag"></i> $</span>
+                    </div>
+                    <p class="course-instructor"><i class="fas fa-user"></i> Instruktor: </p>
+                    <div id="data-science-details" class="course-details" hidden>
+                        <h4>Syllabus</h4>
+                        <ul>
+                            <li>Python asoslari va pandas</li>
+                            <li>Ma'lumotlarni tozalash va vizualizatsiya</li>
+                            <li>Mashinli o'rganish kirish</li>
+                            <li>Proyekt: Model qurish</li>
+                        </ul>
+                        <div class="course-actions">
+                            <button class="enroll-btn" aria-label="Kursga yozilish">Kursga yozilish</button>
+                            <button class="learn-more" aria-label="Biz bilan bog`laning ma'lumot">Biz bilan bog`laning</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-card glass-card" role="region" aria-labelledby="digital-marketing-title">
+                    <div class="course-card-header">
+                        <h3 id="digital-marketing-title">Raqamli marketing</h3>
+                        <button class="expand-course" aria-expanded="false" aria-controls="digital-marketing-details" aria-label="Kurs tafsilotlarini ko'rsatish">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    <div class="course-meta">
+                        <span class="course-duration"><i class="fas fa-clock"></i> </span>
+                        <span class="course-price"><i class="fas fa-tag"></i> $</span>
+                    </div>
+                    <p class="course-instructor"><i class="fas fa-user"></i> Instruktor: </p>
+                    <div id="digital-marketing-details" class="course-details" hidden>
+                        <h4>Syllabus</h4>
+                        <ul>
+                            <li>SEO va kontent strategiyasi</li>
+                            <li>Reklama kampaniyalari va analytics</li>
+                            <li>SMM va brend boshqarish</li>
+                            <li>Proyekt: real marketing kampaniyasi</li>
+                        </ul>
+                        <div class="course-actions">
+                            <button class="enroll-btn" aria-label="Kursga yozilish">Kursga yozilish</button>
+                            <button class="learn-more" aria-label="Biz bilan bog`laning ma'lumot">Biz bilan bog`laning</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-card glass-card" role="region" aria-labelledby="graphic-design-title">
+                    <div class="course-card-header">
+                        <h3 id="graphic-design-title">Grafik dizayn</h3>
+                        <button class="expand-course" aria-expanded="false" aria-controls="graphic-design-details" aria-label="Kurs tafsilotlarini ko'rsatish">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    <div class="course-meta">
+                        <span class="course-duration"><i class="fas fa-clock"></i></span>
+                        <span class="course-price"><i class="fas fa-tag"></i> $</span>
+                    </div>
+                    <p class="course-instructor"><i class="fas fa-user"></i> Instruktor: </p>
+                    <div id="graphic-design-details" class="course-details" hidden>
+                        <h4>Syllabus</h4>
+                        <ul>
+                            <li>Adobe Photoshop va Illustrator</li>
+                            <li>Brend identitet va tipografiya</li>
+                            <li>UI/UX asoslari</li>
+                            <li>Proyekt: real brend identiteti</li>
+                        </ul>
+                        <div class="course-actions">
+                            <button class="enroll-btn" aria-label="Kursga yozilish">Kursga yozilish</button>
+                            <button class="learn-more" aria-label="Biz bilan bog`laning ma'lumot">Biz bilan bog`laning</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teachers Section -->
+    <section id="teachers" class="teachers" aria-labelledby="teachers-title">
+        <div class="container">
+            <h2 id="teachers-title" class="section-title">Bizning o'qituvchilarimiz</h2>
+            <div class="teachers-grid">
+                <div class="teacher-card glass-card" role="region" aria-labelledby="teacher1-name">
+                    <div class="teacher-image">
+                        <img src="teacher.webp">
+                    </div>
+                    <h3 id="teacher1-name">Zoirjon</h3>
+                    <p class="teacher-specialty">Veb dasturlash mutaxassisi</p>
+                    <p class="teacher-bio">10 yildan ortiq tajribaga ega bo'lgan senior dasturchi.</p>
+                </div>
+                <div class="teacher-card glass-card" role="region" aria-labelledby="teacher2-name">
+                    <div class="teacher-image">
+                        <img src="teacher.webp">
+                    </div>
+                    <h3 id="teacher2-name">Rustamjon</h3>
+                    <p class="teacher-specialty">Ma'lumotlar fanlari eksperti</p>
+                    <p class="teacher-bio"> Ma'lumotlar tahlili va AI sohasida 8 yildan ortiq tajriba.</p>
+                </div>
+                <div class="teacher-card glass-card" role="region" aria-labelledby="teacher3-name">
+                    <div class="teacher-image">
+                        <img src="teacher.webp">
+                    </div>
+                    <h3 id="teacher3-name">Umidbek</h3>
+                    <p class="teacher-specialty">Javascript Developer</p>
+                    <p class="teacher-bio">Mobil ilovalar yaratish bo`yicha 7-8 yillik tajribaga ega </p>
+                </div>
+                <div class="teacher-card glass-card" role="region" aria-labelledby="teacher4-name">
+                    <div class="teacher-image">
+                        <img src="teacher.webp">
+                    </div>
+                    <h3 id="teacher4-name">Abbosbek</h3>
+                    <p class="teacher-specialty">Frontend va Backend</p>
+                    <p class="teacher-bio">fullstack dasturchi sertifikatlangan mutaxassis. 7 yildan ortiq tajriba.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <h2 class="section-title fade-in">Xiva shahar IT-PARKda darslar qanday o`tiladi?</h2>
+            <p class="gallery-description fade-in">Bizning jo'shqin o'quv muhitimiz va jamoaviy faoliyatlarimizni tadqiq qiling.</p>
+            <div class="gallery-grid">
+                <figure class="gallery-item glass-card">
+                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Xiva   IT-PARK sinfi" loading="lazy">
+                    <div class="overlay">
+                        <figcaption>Interaktiv dars</figcaption>
+                    </div>
+                </figure>
+                <figure class="gallery-item glass-card">
+                    <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Ish ustida" loading="lazy">
+                    <div class="overlay">
+                        <figcaption>Ish ustida</figcaption>
+                    </div>
+                </figure>
+                <figure class="gallery-item glass-card">
+                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Kod yozish" loading="lazy">
+                    <div class="overlay">
+                        <figcaption>Kod yozish kursi</figcaption>
+                    </div>
+                </figure>
+                <figure class="gallery-item glass-card">
+                    <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Studentlar" loading="lazy">
+                    <div class="overlay">
+                        <figcaption>Talabalar konferensiyasi</figcaption>
+                    </div>
+                </figure>
+                <figure class="gallery-item glass-card">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Praktik dars" loading="lazy">
+                    <div class="overlay">
+                        <figcaption>Amaliy mashg'ulot</figcaption>
+                    </div>
+                </figure>
+                <figure class="gallery-item glass-card">
+                    <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Onlayn dars" loading="lazy">
+                    <div class="overlay">
+                        <figcaption>Onlayn ta'lim</figcaption>
+                    </div>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <span class="close-btn" id="closeLightbox">&times;</span>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="">
+            <div class="lightbox-caption"></div>
+            <button class="prev-btn" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+            <button class="next-btn" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials" aria-labelledby="testimonials-title">
+        <div class="container">
+            <h2 id="testimonials-title" class="section-title">Talaba fikrlari</h2>
+            <div class="testimonials-container">
+                <div class="testimonial-card glass-card" role="region">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Xiva  shahar IT-PARK mening karyeramni o'zgartirdi. Veb dasturlash kursi mening orzumdagi ishga kirishim uchun kerakli ko'nikmalarni berdi."</p>
+                    <h4> Veb dasturchi</h4>
+                </div>
+                <div class="testimonial-card glass-card" role="region">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p>"Instruktorlar dunyo sinfi va o'quv rejası sanoat standartlariga mos keladi. Juda tavsiya qilaman!"</p>
+                    <h4> Ma'lumotlar tahlilchisi</h4>
+                </div>
+                <div class="testimonial-card glass-card" role="region">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <p>"Ko'plab onlayn platformalarni sinab ko'rdim, lekin Xiva  Xiva IT-PARK amaliy yondashuvi va a'lo qo'llab-quvvatlashi bilan ajralib turadi."</p>
+                    <h4> Marketing mutaxassisi</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services" aria-labelledby="services-title">
+        <div class="container">
+            <h2 id="services-title" class="section-title">Bizning xizmatlarimiz</h2>
+            <div class="services-grid">
+                <div class="service-card glass-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3>Shaxsiy mentor</h3>
+                    <p>O`quvchilar uchun tajribali mentorlar tayinlanadi</p>
+                </div>
+                <div class="service-card glass-card">
+                    <div class="service-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3>Interaktiv darsliklar</h3>
+                    <p>Eng zamonaviy interaktiv darsliklar va materiallar</p>
+                </div>
+                <div class="service-card glass-card">
+                    <div class="service-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Ko`p imkoniyatlar</h3>
+                    <p>Har doim savollaringizga javob oling</p>
+                </div>
+                <div class="service-card glass-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Karyera yordami</h3>
+                    <p>Rezyume yozishdan intervyugacha yordam</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section id="statistics" class="statistics" aria-labelledby="statistics-title">
+        <div class="container">
+            <h2 id="statistics-title" class="section-title">Bizning yutuqlarimiz</h2>
+            <div class="stats-container">
+                <div class="stat-card glass-card" role="region">
+                    <div class="stat-number" data-target="5000" aria-label="5000 talaba">0</div>
+                    <p>Talabalar</p>
+                </div>
+                <div class="stat-card glass-card" role="region">
+                    <div class="stat-number" data-target="150" aria-label="150 o'qituvchi">0</div>
+                    <p>O'qituvchilar</p>
+                </div>
+                <div class="stat-card glass-card" role="region">
+                    <div class="stat-number" data-target="200" aria-label="200 kurs">0</div>
+                    <p>Kurslar</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog" aria-labelledby="blog-title">
+        <div class="container">
+            <h2 id="blog-title" class="section-title">So'nggi yangiliklar</h2>
+            <div class="blog-grid">
+                <div class="blog-card glass-card" role="article" aria-labelledby="blog1-title">
+                    <h3 id="blog1-title">Yangi kurs: AI va Mashinli o'rganish</h3>
+                    <p>Sun'iy intellekt va mashinli o'rganish bo'yicha ilg'or kursimizga keyingi oydan boshlab qo'shiling.</p>
+                    <span class="blog-date"><i class="far fa-calendar"></i>Tez kunda</span>
+                </div>
+                <div class="blog-card glass-card" role="article" aria-labelledby="blog2-title">
+                    <h3 id="blog2-title">Talaba muvaffaqiyat hikoyasi: Boshlang'ichdan dasturchigacha</h3>
+                    <p></p>
+                    <span class="blog-date"><i class="far fa-calendar"></i>Tez kunda</span>
+                </div>
+                <div class="blog-card glass-card" role="article" aria-labelledby="blog3-title">
+                    <h3 id="blog3-title">Sanoat ekspertlari vebinar seriyasi</h3>
+                    <p>Yetakchi texnologiya kompaniyalaridan yuqori darajadagi professional mutaxassirlarimizning bepul vebinar seriyasiga qo'shiling.</p>
+                    <span class="blog-date"><i class="far fa-calendar"></i>Tez kunda</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section id="cta" class="cta" aria-labelledby="cta-title">
+        <div class="container">
+            <div class="cta-content">
+                <h2 id="cta-title">Bugun o'rganishni boshlang!</h2>
+                <p>Bizning kurslarimiz orqali kelajakingizni quring. </p>
+                <a href="#contact" class="cta-button large">Biz bilan bog`laning</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq" aria-labelledby="faq-title">
+        <div class="container">
+            <h2 id="faq-title" class="section-title">Ko'p so'raladigan savollar</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Kurslar qanday davom etadi?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Bizning kurslarimiz turiga qarab har xil vaqtlarni o`z ichiga oladi Har bir kurs yakunida sertifikat beriladi.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Kurslar uchun oldindan bilim talab qilinadimi?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Aksariyat kurslarimiz boshlang'ich darajadan boshlanadi. Biroq, ma'lumotlar fanlari kabi ilg'or kurslar uchun asosiy bilimlar talab qilinadi.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Kurslar uchun to'lov qanday amalga oshiriladi?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>IT-PARK markazimizni o`zida amalga oshiriladi</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Kurs yakunida amaliy tajriba beriladimi?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Ha, har bir kurs yakunida talabalarga real loyihalar ustida ishlash imkoniyati beriladi. </p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Kurs materiallariga qanchalik kirish huquqim bor?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Siz kurs materiallariga kurs davomi davomida cheksiz kirish huquqiga egasiz. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+
+    <!-- Test Section -->
+    <section id="test" class="test" aria-labelledby="test-title">
+        <div class="container">
+            <h2 id="test-title" class="section-title">Test topshirish</h2>
+            <div class="test-container">
+                <div class="test-menu">
+                    <h3>Fan tanlang:</h3>
+                    <div class="subject-options">
+                        <button class="subject-btn" data-subject="html" role="button" aria-pressed="false">HTML</button>
+                        <button class="subject-btn" data-subject="css" role="button" aria-pressed="false">CSS</button>
+                        <button class="subject-btn" data-subject="javascript" role="button" aria-pressed="false">JavaScript</button>
+                    </div>
+                    <button id="startTestBtn" class="start-test-btn" disabled role="button" aria-disabled="true">Testni boshlash</button>
+                </div>
+                
+                <div id="testInterface" class="test-interface hidden" role="region" aria-labelledby="test-interface-title">
+                    <h3 id="test-interface-title" class="sr-only">Test interfeysi</h3>
+                    <div class="test-header">
+                        <div class="test-info">
+                            <span id="subjectName">HTML</span> test
+                        </div>
+                        <div class="test-timer" aria-live="polite">
+                            <span id="timeRemaining">30:00</span>
+                        </div>
+                        <button id="exitTestBtn" class="exit-test-btn" role="button">Testdan chiqish</button>
+                    </div>
+                    
+                    <div class="test-progress">
+                        <span id="questionProgress">1-savol 30 tadan</span>
+                        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                            <div id="progressFill" class="progress-fill"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="question-container">
+                        <div id="questionText" class="question-text" aria-live="polite"></div>
+                        <div id="answerOptions" class="answer-options" role="radiogroup"></div>
+                    </div>
+                    
+                    <div class="test-navigation">
+                        <button id="prevQuestionBtn" class="nav-btn" role="button" aria-disabled="true">Oldingi</button>
+                        <button id="nextQuestionBtn" class="nav-btn" role="button" aria-disabled="true">Keyingi</button>
+                        <button id="submitTestBtn" class="submit-test-btn" role="button">Testni topshirish</button>
+                    </div>
+                </div>
+                
+                <div id="testResults" class="test-results hidden" role="region" aria-labelledby="results-title">
+                    <h3 id="results-title">Test natijalari</h3>
+                    <div id="resultsSummary" class="results-summary"></div>
+                    <div id="resultsDetail" class="results-detail"></div>
+                    <button id="downloadResultsBtn" class="download-btn" role="button">Natijalarni PDF sifatida yuklab olish</button>
+                    <button id="retakeTestBtn" class="retake-btn" role="button">Boshqa test topshirish</button>
+                </div>
+            </div>
+        </div>
+    </section>
+ <!-- Contact Section -->
+    <section id="contact" class="contact" aria-labelledby="contact-title">
+        <div class="container">
+            <h2 id="contact-title" class="section-title">Telefon raqam</h2>
+            <div style="text-align:center; font-size:1.5rem; margin: 2rem 0;">
+                <a href="tel:+998991234567" style="color:var(--primary-color); text-decoration:none; font-weight:bold;">
+                    <i class="fas fa-phone"></i> +998 99 123 45 67
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>IT-PARK</h2>
+                    <p>Dunyo bo'ylab o'quvchilarni kuchaytirish</p>
+                </div>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i> Facebook</a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i> Twitter</a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i> Instagram</a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Xiva   IT-PARK. Barcha huquqlar himoyalangan.</p>
+            </div>
+        </div>
+    </footer>
+
+        <!-- particles.js CDN -->
+        <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+        <script src="script.js"></script>
+        <script>
+        // Always show particles except under hero overlay (use CSS for z-index)
+        document.addEventListener('DOMContentLoaded', function() {
+            particlesJS('particles-js', {
+                particles: {
+                    number: { value: 60, density: { enable: true, value_area: 900 } },
+                    color: { value: '#00B894' },
+                    shape: { type: 'circle' },
+                    opacity: { value: 0.18, random: true },
+                    size: { value: 3, random: true },
+                    line_linked: { enable: true, distance: 120, color: '#00B894', opacity: 0.13, width: 1 },
+                    move: { enable: true, speed: 1.2, direction: 'none', random: false, straight: false, out_mode: 'out', bounce: false }
+                },
+                interactivity: {
+                    detect_on: 'canvas',
+                    events: {
+                        onhover: { enable: true, mode: 'repulse' },
+                        onclick: { enable: true, mode: 'push' },
+                        resize: true
+                    },
+                    modes: {
+                        repulse: { distance: 80, duration: 0.4 },
+                        push: { particles_nb: 4 }
+                    }
+                },
+                retina_detect: true
+            });
+        });
+
+        // Typing effect for hero
+        document.addEventListener('DOMContentLoaded', function() {
+            const phrases = [
+                'kelajak kaliti',
+                'innovatsiya markazi',
+                'texnologiya sari'
+            ];
+            const typedText = document.getElementById('typed-text');
+            const cursor = document.getElementById('typed-cursor');
+            let phraseIndex = 0, charIndex = 0, isDeleting = false;
+            function type() {
+                if (!typedText) return;
+                const current = phrases[phraseIndex];
+                if (isDeleting) {
+                    typedText.textContent = current.substring(0, charIndex--);
+                } else {
+                    typedText.textContent = current.substring(0, charIndex++);
+                }
+                cursor.style.opacity = (Date.now() % 1000 < 500) ? '1' : '0.3';
+                if (!isDeleting && charIndex > current.length) {
+                    setTimeout(() => { isDeleting = true; type(); }, 1200);
+                } else if (isDeleting && charIndex < 0) {
+                    isDeleting = false;
+                    phraseIndex = (phraseIndex + 1) % phrases.length;
+                    setTimeout(type, 400);
+                } else {
+                    setTimeout(type, isDeleting ? 40 : 90);
+                }
+            }
+            type();
+        });
+
+        // Animated scroll-down indicator
+        document.addEventListener('DOMContentLoaded', function() {
+            const indicator = document.createElement('div');
+            indicator.className = 'scroll-indicator';
+            indicator.innerHTML = '<span></span>';
+            document.querySelector('.hero-container').appendChild(indicator);
+        });
+        </script>
+</body>
+
+<style>
+
+/* Particles always visible except under hero/promo overlay */
+#particles-js { position: fixed; top:0; left:0; width:100vw; height:100vh; z-index:0; pointer-events:none; }
+
+/* Hero video as true background */
+.hero, .promo {
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+}
+.hero-video-bg, .promo-video-bg {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    min-width: 100vw;
+    min-height: 100vh;
+    pointer-events: none;
+}
+.hero-overlay, .promo-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.7);
+    z-index: 2;
+}
+.hero-container, .promo-container {
+    position: relative;
+    z-index: 3;
+}
+
+/* Typing effect styles */
+#typed-text { color: #fff; font-weight: 700; font-size: 2.2rem; letter-spacing: 1px; }
+#typed-cursor { color: #fff; font-size: 2.2rem; font-weight: 400; margin-left: 2px; animation: blink 1s steps(2, start) infinite; }
+@keyframes blink { 0%,100%{opacity:1;} 50%{opacity:0.2;} }
+
+/* Scroll-down indicator */
+.scroll-indicator { margin: 2.2rem auto 0 auto; width: 32px; height: 48px; border: 2px solid #fff; border-radius: 20px; position: relative; opacity: 0.7; animation: fadeInUp 1.2s; }
+.scroll-indicator span { display: block; width: 6px; height: 6px; background: #fff; border-radius: 50%; position: absolute; left: 50%; top: 10px; transform: translateX(-50%); animation: scrollDot 1.3s infinite cubic-bezier(.4,0,.2,1); }
+@keyframes scrollDot { 0% { top:10px; opacity:1; } 80% { top:28px; opacity:0.7; } 100% { top:10px; opacity:0.1; } }
+</style>
+</html>
